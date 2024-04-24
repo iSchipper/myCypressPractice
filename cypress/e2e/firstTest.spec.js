@@ -28,7 +28,7 @@ describe('First test suite', () => {
             .click()
     })
 
-    it.only('Save subject of the command', () => {
+    it('Save subject of the command', () => {
         cy.visit('/')
         cy.contains('Forms').click()
         cy.contains('Form Layouts').click()
@@ -55,5 +55,7 @@ describe('First test suite', () => {
             cy.wrap(usingTheGridForm).find('[for="inputEmail1"]').should('contain', 'Email')
             cy.wrap(usingTheGridForm).find('[for="inputPassword2"]').should('contain', 'Password')
         })
+
     })
+
 })
